@@ -18,9 +18,9 @@ pipeline {
             }
         }
     }
-    post(
-    always (
+    post{
+        always {
               emailext body: 'Summary', replyTo: 'ayushdiggiwal@gmail.com', subject: 'Pipeline-Notify', to: 'ayushdiggiwal@gmail.com'
-              )
-              )
+        }
+    }
 }
